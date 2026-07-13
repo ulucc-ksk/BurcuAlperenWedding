@@ -158,6 +158,9 @@ export default function WeddingInvitation({
             ))}
           </div>
         </section>
+        <footer className="pt-4 text-center text-[11px] text-mocha/55">
+          {weddingConfig.common.copyright}
+        </footer>
       </div>
     </main>
   );

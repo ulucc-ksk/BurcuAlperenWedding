@@ -34,7 +34,8 @@ export const weddingConfig = {
     invitationText:
       "Bu mutlu günümüzde sizleri aramızda görmekten büyük mutluluk duyarız.",
     artworkPath: "/images/burcu-alperen-main.png",
-    artworkAlt: "Burcu ve Alperen düğün illüstrasyonu"
+    artworkAlt: "Burcu ve Alperen düğün illüstrasyonu",
+    copyright: "© 2026 U. Gülgeze. Tüm hakları saklıdır."
   },
   labels: {
     rsvp: "Katılım Bilgisi Ver",
@@ -96,6 +97,7 @@ export const weddingConfig = {
     invitationText: string;
     artworkPath: string;
     artworkAlt: string;
+    copyright: string;
   };
   labels: {
     rsvp: string;
