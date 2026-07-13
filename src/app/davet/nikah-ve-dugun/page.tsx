@@ -1,13 +1,7 @@
 import WeddingInvitation from "@/components/WeddingInvitation";
 import { weddingConfig } from "@/config/wedding";
 
-export default async function NikahVeDugunInvitationPage({
-  params
-}: {
-  params: Promise<{ code: string }>;
-}) {
-  const { code } = await params;
-
+export default function NikahVeDugunInvitationPage() {
   return (
     <WeddingInvitation
       title={weddingConfig.invitations.nikahVeDugun.title}
@@ -15,7 +9,7 @@ export default async function NikahVeDugunInvitationPage({
       countdownTitle={weddingConfig.invitations.nikahVeDugun.countdownTitle}
       countdownEvent={weddingConfig.nikah}
       events={[weddingConfig.nikah, weddingConfig.dugun]}
-      rsvpPath={`/davet/nikah-ve-dugun/${encodeURIComponent(code)}/katilim`}
+      rsvpPath="/davet/nikah-ve-dugun/katilim"
     />
   );
 }
