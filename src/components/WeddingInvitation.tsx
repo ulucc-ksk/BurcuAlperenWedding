@@ -127,7 +127,7 @@ export default function WeddingInvitation({
                   </ActionLink>
                 ) : null}
                 {calendarPath ? (
-                  <ActionLink href={calendarPath} variant="secondary" newTab>
+                  <ActionLink href={calendarPath} variant="calendar" newTab>
                     {weddingConfig.labels.calendar}
                   </ActionLink>
                 ) : null}
@@ -320,13 +320,15 @@ function ActionLink({
   id?: string;
   href: string;
   children: ReactNode;
-  variant: "primary" | "secondary";
+  variant: "primary" | "secondary" | "calendar";
   newTab?: boolean;
 }) {
   const className =
     variant === "primary"
       ? "rsvp-attention border-2 border-[#7a2638] bg-gold text-white shadow-button hover:bg-bronze"
-      : "border border-gold/55 bg-white/42 text-umber hover:bg-white/70";
+      : variant === "calendar"
+        ? "bg-gold text-white shadow-button hover:bg-bronze"
+        : "border border-gold/55 bg-white/42 text-umber hover:bg-white/70";
 
   return (
     <a
